@@ -113,7 +113,11 @@ function ProfileForm({
       <AspectRatio ratio={16 / 9} className="bg-muted">
         <Image src={img} alt={title} fill className="rounded-md object-cover" />
       </AspectRatio>
-      <DrawerTitle className="text-blue-500">{description}</DrawerTitle>
+      <DrawerTitle className="text-blue-500">
+        <a className="text-xl text-blue-500" href={`tel:${tel}`}>
+          {description}
+        </a>
+      </DrawerTitle>
       <Button>
         {" "}
         <a href={`tel:${tel}`}>{buttonText}</a>
