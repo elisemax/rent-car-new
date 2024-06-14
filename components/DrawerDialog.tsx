@@ -19,7 +19,7 @@ import {
 import { AspectRatio } from "./ui/aspect-ratio";
 import Image, { StaticImageData } from "next/image";
 import { useMediaQuery } from "./func/useMediaQeury";
-import TeslaModelSImg from "@/img/cars/teslaModelS.jpeg";
+import { useTranslations } from "next-intl";
 
 type Props = {
   open: boolean;
@@ -35,6 +35,7 @@ type Props = {
 export function DrawerDialog(props: Props) {
   const { open, setOpen, car } = props;
   const isDesktop = useMediaQuery();
+  const t = useTranslations("IndexPage");
 
   if (isDesktop) {
     return (
@@ -44,7 +45,15 @@ export function DrawerDialog(props: Props) {
             <DialogTitle>{car?.name}</DialogTitle>
             <DialogDescription>{car?.price}</DialogDescription>
           </DialogHeader>
-          {car && <ProfileForm img={car?.image} title={car?.name} />}
+          {car && (
+            <ProfileForm
+              tel={t("card.tel")}
+              buttonText={t("card.buttonCall")}
+              description={t("card.telOur") + t("card.tel")}
+              img={car?.image}
+              title={car?.name}
+            />
+          )}
         </DialogContent>
       </Dialog>
     );
@@ -58,7 +67,14 @@ export function DrawerDialog(props: Props) {
           <DrawerDescription>{car?.price}</DrawerDescription>
         </DrawerHeader>
         {car && (
-          <ProfileForm img={car?.image} title={car?.name} className="px-4" />
+          <ProfileForm
+            tel={t("card.tel")}
+            buttonText={t("card.buttonCall")}
+            description={t("card.telOur") + " " + t("card.tel")}
+            img={car?.image}
+            title={car?.name}
+            className="px-4"
+          />
         )}
         <DrawerFooter className="pt-2">
           <DrawerClose asChild>
@@ -68,7 +84,7 @@ export function DrawerDialog(props: Props) {
               }}
               variant="outline"
             >
-              Cancel
+              {t("card.buttonCancel")}
             </Button>
           </DrawerClose>
         </DrawerFooter>
@@ -81,18 +97,27 @@ function ProfileForm({
   className,
   img,
   title,
+  description,
+  buttonText,
+  tel,
 }: {
   className?: string;
   img: StaticImageData;
   title: string;
+  buttonText: string;
+  description: string;
+  tel: string;
 }) {
   return (
     <div className={cn("grid items-start gap-4", className)}>
       <AspectRatio ratio={16 / 9} className="bg-muted">
         <Image src={img} alt={title} fill className="rounded-md object-cover" />
       </AspectRatio>
-      <DrawerTitle>Edit profile</DrawerTitle>
-      <Button>Save changes</Button>
+      <DrawerTitle className="text-blue-500">{description}</DrawerTitle>
+      <Button>
+        {" "}
+        <a href={`tel:${tel}`}>{buttonText}</a>
+      </Button>
     </div>
   );
 }

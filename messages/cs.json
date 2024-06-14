@@ -21,7 +21,11 @@
     "card": {
       "price": "Cena:",
       "priceValue": "{price} Kc za tyden",
-      "button": "Objednat"
+      "button": "Objednat",
+      "buttonCall": "Zavolat",
+      "telOur": "Nase cislo:",
+      "tel": "+420 608 275 237",
+      "buttonCancel": "Zrusit"
     },
     "form": {
       "title": "Stačí nám zavolat nebo napsat email jakýmkoli vhodným způsobem:",
