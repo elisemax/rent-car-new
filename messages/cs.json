@@ -1,0 +1,61 @@
+{
+  "IndexPage": {
+    "title": "Zdravim",
+    "content": "Vitejte na moji strance",
+    "companyName": "Moje firma",
+    "companyAddress": "Ulice 1, Mesto",
+    "language": "Jazyk",
+    "buttonOrder": "Objednat auto",
+    "languagePicker": "Vyberte jazyk",
+    "languageOptions": {
+      "czech": "Cesky",
+      "english": "Anglicky",
+      "russian": "Rusky"
+    },
+    "nav": {
+      "home": "Domu",
+      "about": "O nas",
+      "contact": "Kontakt",
+      "services": "Objednat auto"
+    },
+    "card": {
+      "price": "Cena:",
+      "priceValue": "{price} Kc za tyden",
+      "button": "Objednat"
+    },
+    "form": {
+      "title": "Stačí nám zavolat nebo napsat email jakýmkoli vhodným způsobem:",
+      "titleForm": "Objednat auto",
+      "name": "Jmeno",
+      "mail": "Email",
+      "phone": "Telefon",
+      "button": "Odeslat"
+    },
+    "featuresOptions": {
+      "title1": "Vozovy park.",
+      "title2": "Vase vyhody.",
+      "title3": "Nase sluzby.",
+      "title4": "Taxi sluzby.",
+      "feature1": "Vozový park naší autopůjčovny je pravidelně obměňován a doplňován o nové modely.",
+      "feature2": "Našich zákazníků si vážíme, a proto je neomezujeme denním počtem ujetých kilometrů.",
+      "feature3": "Servis vozů je pravidelně prováděn v našem autoservise.",
+      "feature4": "Mimo služeb autopůjčovny pro fyzické a právnické osoby nabízíme i možnost pronájmu TAXI vozů za velmi výhodné týdenní ceny."
+    },
+    "contacts": {
+      "title1": "Telephone:",
+      "title2": "Email:",
+      "title3": "Viber:",
+      "title4": "Whatsapp:",
+      "title5": "Telegram:",
+      "contact1": "+420 608 275 237",
+      "contact2": "+420 608 275 237",
+      "contact3": "+420 608 275 237",
+      "contact4": "+420 608 275 237",
+      "contact5": "+420 608 275 237"
+    }
+  },
+  "NotFoundPage": {
+    "title": "404 - Stranka nenalezena",
+    "content": "Stranka, kterou hledate, neexistuje."
+  }
+}

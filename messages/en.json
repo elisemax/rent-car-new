@@ -1,0 +1,19 @@
+{
+  "IndexPage": {
+    "title": "Hello",
+    "content": "Welcome to your new single-page application, built with:",
+    "companyName": "Moje firma",
+    "companyAddress": "Ulice 1, Mesto",
+    "language": "Jazyk",
+    "languagePicker": "Vyber jazyk",
+    "languageOptions": {
+      "czech": "Cesky",
+      "english": "Anglicky",
+      "russian": "Rusky"
+    }
+  },
+  "NotFoundPage": {
+    "title": "Stranka nenalezena",
+    "content": "Stranka nenalezena"
+  }
+}
