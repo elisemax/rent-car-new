@@ -3,6 +3,7 @@ import React from "react";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import { FormContact } from "./FormContact";
 import Image, { StaticImageData } from "next/image";
+import { useTranslations } from "next-intl";
 
 type Props = {
   title: string;
@@ -17,6 +18,7 @@ type Props = {
 
 export default function CardForm(props: Props) {
   const { title, contacts, titleForm, showForm } = props;
+  const t = useTranslations("IndexPage");
   return (
     <div className="bg-white py-6 sm:py-24 lg:py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8 xl:justify-items-start sm:justify-items-center justify-items-unset">
@@ -43,7 +45,7 @@ export default function CardForm(props: Props) {
             />
             <div className="flex flex-col ml-2 justify-around text-sm font-semibold">
               <span>{contact.title}</span>
-              <a className="text-blue-500" href={`tel:${contact}`}>
+              <a className="text-blue-500" href={`tel:${t("card.tel")}`}>
                 {contact.contact}
               </a>
             </div>
